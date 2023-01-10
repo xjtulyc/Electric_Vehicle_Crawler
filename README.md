@@ -2,4 +2,4 @@
 
 # 关于项目
 
-[项目背景]()
+[项目背景](https://github.com/xjtulyc/Electric_Vehicle_Crawler/blob/main/docs/background.md)
