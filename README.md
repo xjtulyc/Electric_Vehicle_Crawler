@@ -17,7 +17,7 @@ git clone git@github.com:xjtulyc/Electric_Vehicle_Crawler.git
 爬取数据，依次爬取汽车销量等需要分析的数据。
 
 ```shell
-python scraler.py
+python crawler.py
 ```
 
 使用线性回归和灰色预测对数据进行分析，其中充电桩的空间分布使用聚类分析进行度量。
