@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from tqdm import trange
 
+#
 # 1.卸载旧版本
 # apt purge phantomjs    或者  sudo apt-get autoremove phantomjs
 # 2.通过Wget下载phantomjs
@@ -21,7 +22,7 @@ driver = webdriver.PhantomJS(
 # 此函数用于加载网页，并返回无头浏览器全部渲染过的数据，即所见即所得
 def get_url(url):
     driver.get(url)  # 加载网页
-    driver.implicitly_wait(10)  # 隐式等待10秒钟，智能等待网页加载
+    driver.implicitly_wait(5)  # 隐式等待5秒钟，智能等待网页加载
     source = driver.page_source  # 获取网页信息
     return source
 
@@ -42,7 +43,7 @@ def links(month):
     # https://xl.16888.com/style-201903-201903-1.html
     links = []
     month_ = [i + j
-              for i in ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+              for i in ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022']
               for j in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
               if i + j <= month]
     for i in month_:
@@ -71,3 +72,5 @@ for i in url:
     all_info = pd.DataFrame(all_info)
     all_info_ = pd.concat([all_info_, all_info])
 print(all_info_)
+
+all_info_.to_csv("output.csv")
