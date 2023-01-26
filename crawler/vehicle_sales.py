@@ -4,7 +4,8 @@ import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from tqdm import trange, tqdm
+from tqdm import tqdm
+
 
 #
 # 1.卸载旧版本
@@ -15,10 +16,6 @@ from tqdm import trange, tqdm
 # tar xvjf phantomjs-2.1.1-linux-x86_64.tar.bz2
 # 4.将phantomjs文件移动到/usr/bin/
 # sudo cp phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/
-
-driver = webdriver.PhantomJS(
-    executable_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
-)  # 加载无头浏览器，具体查看selenium文档，可换成火狐或者谷歌浏览器
 
 
 # 此函数用于加载网页，并返回无头浏览器全部渲染过的数据，即所见即所得
@@ -73,19 +70,23 @@ def links(month):
     return links
 
 
-month = '202212'
-url = links(month)
-all_info_ = pd.DataFrame()
-for i in tqdm(url):
-    print(i)
-    source = get_url(i)
-    all_info = get_info(source)
-    date_month = i[24:30]
-    date = np.array([date_month for i in range(len(all_info))])
-    all_info = np.c_[all_info, date]
-    all_info = pd.DataFrame(all_info)
-    all_info_ = pd.concat([all_info_, all_info])
-print(all_info_)
-# all_info.columns = ["序号","车型","销量","厂商","最低售价","最高售价","参数","日期"] # csv文件没有表头，这里只是参考一下
-all_info_.to_csv("1401_2212新能源汽车总体销量数据.csv")
-print("Finished")
+if __name__ == '__main__':
+    driver = webdriver.PhantomJS(
+        executable_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+    )  # 加载无头浏览器，具体查看selenium文档，可换成火狐或者谷歌浏览器
+    month = '202212'
+    url = links(month)
+    all_info_ = pd.DataFrame()
+    for i in tqdm(url):
+        print(i)
+        source = get_url(i)
+        all_info = get_info(source)
+        date_month = i[24:30]
+        date = np.array([date_month for i in range(len(all_info))])
+        all_info = np.c_[all_info, date]
+        all_info = pd.DataFrame(all_info)
+        all_info_ = pd.concat([all_info_, all_info])
+    print(all_info_)
+    # all_info.columns = ["序号","车型","销量","厂商","最低售价","最高售价","参数","日期"] # csv文件没有表头，这里只是参考一下
+    all_info_.to_csv("1401_2212新能源汽车总体销量数据.csv")
+    print("Finished")
