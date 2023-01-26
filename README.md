@@ -1,5 +1,20 @@
 # Electric Vehicle Crawler | 新能源汽车爬虫
 
+## 关于作者
+
+点击我的主页[youchengli.com](youchengli.com)了解关于我的情况。
+
+## 快速上手
+
+我们的项目包括：
+- 数据爬虫
+  - 汽车之家新能源汽车销量、售价
+  - 国际原油价格
+  - 中国充电桩分布
+- 数据分析
+  - 对充电桩分布进行聚类分析
+  - 使用线性回归和灰色预测预测新能源汽车的销量
+
 ## 关于项目
 
 [[项目背景]](https://github.com/xjtulyc/Electric_Vehicle_Crawler/blob/main/docs/background.md)
