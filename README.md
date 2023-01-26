@@ -2,7 +2,7 @@
 
 ## 关于作者
 
-点击我的主页[youchengli.com](youchengli.com)了解关于我的情况。
+点击我的主页[youchengli.com](https://youchengli.com)了解关于我的情况。
 
 ## 快速上手
 
