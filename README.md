@@ -2,9 +2,8 @@
 
 ## 关于项目
 
-[项目背景](https://github.com/xjtulyc/Electric_Vehicle_Crawler/blob/main/docs/background.md)
-
-[API](https://github.com/xjtulyc/Electric_Vehicle_Crawler/blob/main/docs/api.md)
+[[项目背景]](https://github.com/xjtulyc/Electric_Vehicle_Crawler/blob/main/docs/background.md)
+[[API]](https://github.com/xjtulyc/Electric_Vehicle_Crawler/blob/main/docs/api.md)
 
 ## 运行
 
@@ -40,9 +39,9 @@ bs4
 
 - [x] 1.1. 汽车销量 （2023-01-10 to 2023-01-14）
 
-- [x] 1.2. 汽车配置水平 （2023-01-14 to 2023-01-16）
+- [x] 1.2. 汽车售价 （2023-01-14 to 2023-01-16）
 
-- [x] 1.3. 汽油柴油价格 （2023-01-16 to 2023-01-20）
+- [x] 1.3. 汽油柴油价格 （2023-01-16 to 2023-01-20）参考[这个项目](https://github.com/datasets/oil-prices)
 
 - [x] 1.4. 充电桩数目和空间分布 （2023-01-20 to 2023-01-25）
 
