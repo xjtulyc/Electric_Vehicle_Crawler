@@ -70,6 +70,29 @@ def links(month):
     return links
 
 
+def get_ev_data(driver_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
+                month="202212"):
+    driver = webdriver.PhantomJS(
+        executable_path=driver_path
+    )  # 加载无头浏览器，具体查看selenium文档，可换成火狐或者谷歌浏览器
+    # month = '202212'
+    url = links(month)
+    all_info_ = pd.DataFrame()
+    for i in tqdm(url):
+        print(i)
+        source = get_url(i)
+        all_info = get_info(source)
+        date_month = i[24:30]
+        date = np.array([date_month for i in range(len(all_info))])
+        all_info = np.c_[all_info, date]
+        all_info = pd.DataFrame(all_info)
+        all_info_ = pd.concat([all_info_, all_info])
+    print(all_info_)
+    # all_info.columns = ["序号","车型","销量","厂商","最低售价","最高售价","参数","日期"] # csv文件没有表头，这里只是参考一下
+    all_info_.to_csv("1401_2212新能源汽车总体销量数据.csv")
+    print("Finished")
+
+
 if __name__ == '__main__':
     driver = webdriver.PhantomJS(
         executable_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs"

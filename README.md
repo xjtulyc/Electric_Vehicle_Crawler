@@ -9,7 +9,7 @@
 我们的项目包括：
 - 数据爬虫
   - 汽车之家新能源汽车销量、售价
-  - 国际原油价格
+  - 国际原油价格，参考自[这个项目](https://github.com/datasets/oil-pr)
   - 中国充电桩分布
 - 数据分析
   - 对充电桩分布进行聚类分析
@@ -28,10 +28,22 @@
 git clone git@github.com:xjtulyc/Electric_Vehicle_Crawler.git
 ```
 
-爬取数据，依次爬取汽车销量等需要分析的数据。
+下载新能源汽车月度销量、售价数据，下载数据可以在``crawler/1401_2212新能源汽车总体销量数据.csv``中查看。
 
 ```shell
-python crawler.py
+python crawler/vehicle_sales.py
+```
+
+下载国际燃油月度价格数据，下载数据可以在``crawler/国际原油``中查看。
+
+```shell
+python crawler/oil_price/oil_prices_flow.py
+```
+
+下载国内充电桩数据，下载数据可以在``crawler/充电桩``中查看。
+
+```shell
+python crawler/charging_pile.py
 ```
 
 使用线性回归和灰色预测对数据进行分析，其中充电桩的空间分布使用聚类分析进行度量。
@@ -46,6 +58,9 @@ numpy
 pandas
 selenium
 bs4
+dataflows
+urllib3
+xlsxwriter
 ```
 
 ## 项目进展
