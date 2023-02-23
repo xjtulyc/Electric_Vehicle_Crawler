@@ -2,7 +2,7 @@ import requests
 
 # 注册成为开发者
 # https://lbsyun.baidu.com/apiconsole/user/choose
-AK = '[这里填写自己申请的AK值]'
+AK = 'XyP2v28GC4Di4bYfuLVlbiRwvjTVeUzL'
 
 
 def Pos2Coord(name):
