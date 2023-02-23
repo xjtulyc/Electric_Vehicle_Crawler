@@ -23,7 +23,7 @@ def get_data(url):
         return None
 
 
-def get_charging_pile(driver_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
+def get_charging_pile(driver_path="/slurm_data/youcheng.li/EVCrawler/phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
                       provincce=None):
     driver = webdriver.PhantomJS(
         executable_path=driver_path
@@ -105,7 +105,7 @@ def get_charging_pile(driver_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs
 
 if __name__ == "__main__":
     driver = webdriver.PhantomJS(
-        executable_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+        executable_path="/slurm_data/youcheng.li/EVCrawler/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
     )  # 启动浏览器
     # 中国所有省份
     province = ['河北', '山西', '辽宁', '吉林', '黑龙江', '江苏', '浙江', '安徽', '福建', '江西', '山东', '河南', '湖北', '湖南', '广东', '海南', '四川',

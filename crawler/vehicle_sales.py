@@ -70,7 +70,7 @@ def links(month):
     return links
 
 
-def get_ev_data(driver_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
+def get_ev_data(driver_path="/slurm_data/youcheng.li/EVCrawler/phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
                 month="202212"):
     driver = webdriver.PhantomJS(
         executable_path=driver_path
@@ -95,7 +95,7 @@ def get_ev_data(driver_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs",
 
 if __name__ == '__main__':
     driver = webdriver.PhantomJS(
-        executable_path="../phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+        executable_path="/slurm_data/youcheng.li/EVCrawler/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
     )  # 加载无头浏览器，具体查看selenium文档，可换成火狐或者谷歌浏览器
     month = '202212'
     url = links(month)
