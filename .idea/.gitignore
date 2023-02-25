@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -6,3 +7,17 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+=======
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/__pycache__/*
+/.git/*
+/.idea/*
+/.vscode/*
+>>>>>>> 4c0d67466d39a8ef4aee9e02ddd91a26373d2c31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="Yizhun" remoteFilesAllowedToDisappearOnAutoupload="false">
@@ -12,4 +13,20 @@
     </serverData>
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Yizhun" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Yizhun">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/slurm_data/youcheng.li/EVCrawler" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+>>>>>>> 4c0d67466d39a8ef4aee9e02ddd91a26373d2c31
 </project>
