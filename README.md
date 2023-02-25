@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Electric Vehicle Crawler | 新能源汽车爬虫
 
 ## 关于作者
